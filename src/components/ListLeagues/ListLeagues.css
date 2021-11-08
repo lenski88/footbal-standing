@@ -1,0 +1,32 @@
+.leagues-block {
+    width:355px;
+}
+.leagues-list {
+    margin:0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.leagues-item {
+    list-style: none;
+    font-size: 20px;
+    color:rgb(7, 7, 165)
+}
+
+span:hover {
+    color:rgb(225, 225, 236);
+    cursor: pointer;
+}
+
+.leagues-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+img {
+    width:20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
