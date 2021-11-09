@@ -1,5 +1,5 @@
 .leagues-block {
-    width:355px;
+    width:30%;
 }
 .leagues-list {
     margin:0;
@@ -15,7 +15,7 @@
     color:rgb(7, 7, 165)
 }
 
-span:hover {
+.leagues-item-span:hover {
     color:rgb(225, 225, 236);
     cursor: pointer;
 }

@@ -1,0 +1,17 @@
+.main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color:rgb(7, 7, 165);
+    width:70%
+}
+.main-block .main-block-title {
+    flex:1 1 70%
+}
+
+.main-block .main-block-title >img {
+    width:100px;
+    height: 100px;
+}
