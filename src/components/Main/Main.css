@@ -1,4 +1,5 @@
 .main-block {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,6 +8,7 @@
   color: rgb(7, 7, 165);
   width: 70%;
 }
+
 .main-block .main-block-title > h2 {
   margin: 0;
 }
@@ -31,4 +33,10 @@ select {
   box-shadow: 0 1px 0 1px rgb(7, 7, 165);
   border-radius: 0.5em;
   background-color: transparent;
+}
+
+@media (max-width:900px) {
+  .main-block{
+      width:100%
+  }
 }

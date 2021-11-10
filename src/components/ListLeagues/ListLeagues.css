@@ -30,3 +30,25 @@ img {
     margin-right: 10px;
 }
 
+@media (max-width:900px) {
+    .leagues-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .leagues-block {
+        width:100%
+    }
+    .leagues-item {
+        font-size: 24px;
+        margin: 15px 0;
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width:620px) {
+    .leagues-item {
+        flex-basis: 70%;
+    }
+}
+
+

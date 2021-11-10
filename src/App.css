@@ -6,3 +6,10 @@
   align-items: flex-start;
 }
 
+@media (max-width:900px) {
+  .App {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

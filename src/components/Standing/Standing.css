@@ -1,22 +1,47 @@
 .standing {
-    margin: 20px 40px 20px 0px;
+  margin: 20px 40px 20px 0px;
 }
 
 .standing-table {
-    border-collapse: collapse;
-    table-layout: fixed;
-    width:100%
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
 }
 
-
-td, th {
-    border-bottom: .5px solid rgb(7, 7, 165);
-    font-size: 18px;
+td,
+th {
+  border-bottom: 0.5px solid rgb(7, 7, 165);
+  font-size: 18px;
 }
 
 .team {
-    text-align: start;
+  text-align: start;
 }
 caption {
-    font-size: 24px;
+  font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .standing {
+    margin: 10px 10px;
+  }
+}
+
+@media (max-width: 620px) {
+  td,
+  th {
+    font-size: 12px;
+  }
+}
+@media (max-width: 400px) {
+    select {
+        right: 5px;
+    }
+    caption {
+        font-size: 16px;
+    }
+    td,
+  th {
+    font-size: 10px;
+  }
 }
