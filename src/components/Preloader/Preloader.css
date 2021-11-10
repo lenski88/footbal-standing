@@ -1,0 +1,18 @@
+.preloader {
+    position: absolute;
+    top:0;
+    left:0;
+    width:10%;
+    height: 2px;
+    background: rgb(7, 7, 165);
+    animation: animPreloader .5s infinite linear alternate;
+}
+
+@keyframes animPreloader {
+    0% {
+        left:0%
+    }
+    100% {
+        left: 90%;
+    }
+}

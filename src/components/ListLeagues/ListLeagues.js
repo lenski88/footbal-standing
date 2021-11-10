@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import isoFetch from "isomorphic-fetch";
 import { selectedLeagueAC } from "../../redux/actions/selectedLeagueAC";
 import { useDispatch } from "react-redux";
+import { Preloader } from "../Preloader/Preloader";
 
 import "./ListLeagues.css";
 
@@ -48,7 +49,7 @@ export const ListLeagues = () => {
   }
   return (
     <div className="leagues-block">
-      {loadData ? <ul className="leagues-list">{listLeagues}</ul> : "Loading"}
+      {loadData ? <ul className="leagues-list">{listLeagues}</ul> : <Preloader/>}
     </div>
   );
 };
