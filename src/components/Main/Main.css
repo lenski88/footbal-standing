@@ -1,17 +1,34 @@
 .main-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    color:rgb(7, 7, 165);
-    width:70%
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: rgb(7, 7, 165);
+  width: 70%;
 }
-.main-block .main-block-title {
-    flex:1 1 70%
+.main-block .main-block-title > h2 {
+  margin: 0;
+}
+.main-block .main-block-title > select {
+  position: absolute;
+  top: 5px;
+  right: 45px;
 }
 
-.main-block .main-block-title >img {
-    width:100px;
-    height: 100px;
+.main-block .main-block-title > img {
+  width: 100px;
+  height: 100px;
+}
+
+select {
+  display: block;
+  font-size: 16px;
+  color: rgb(7, 7, 165);
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  margin: 0;
+  border: 1px solid rgb(7, 7, 165);
+  box-shadow: 0 1px 0 1px rgb(7, 7, 165);
+  border-radius: 0.5em;
+  background-color: transparent;
 }

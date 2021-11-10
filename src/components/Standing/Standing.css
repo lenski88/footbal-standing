@@ -1,0 +1,22 @@
+.standing {
+    margin: 20px 40px 20px 0px;
+}
+
+.standing-table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width:100%
+}
+
+
+td, th {
+    border-bottom: .5px solid rgb(7, 7, 165);
+    font-size: 18px;
+}
+
+.team {
+    text-align: start;
+}
+caption {
+    font-size: 24px;
+}

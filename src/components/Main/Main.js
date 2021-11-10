@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import isoFetch from "isomorphic-fetch";
 import { seasonsLoadingStarted } from "../../redux/actions/seasonsAvailableAC";
+import { Standing } from "../Standing/Standing";
 
 import "./Main.css";
 
@@ -12,6 +13,7 @@ export const Main = () => {
     (state) => state.seasonsAvailable.seasons
   );
   const [leagueLogoURL, setLeagueLogoURL] = useState("");
+  const [year, setYear] = useState('2021')
   useEffect(() => {
     if (selectedLeague) {
       dispatch(seasonsLoadingStarted(selectedLeague));
@@ -37,12 +39,24 @@ export const Main = () => {
       });
   }, [selectedLeague]);
 
-  return (
+  let years;
+  if (selectedLeagueRender.length !== 0) {
+    years = selectedLeagueRender.seasons.map((season) => {
+      return <option key={season.year} value={season.year}>{season.year}</option>;
+    });
+  }
+
+  const handleSelectedYear = (eo) => {
+    setYear(eo.target.value)
+  }
+  return selectedLeague ? (
     <div className="main-block">
       <div className="main-block-title">
         <img src={leagueLogoURL} alt={selectedLeagueRender.name} />
-        <h3>{selectedLeagueRender.name}</h3>
+        <h2>{selectedLeagueRender.name}</h2>
+        <select onClick={handleSelectedYear}>{years}</select>
       </div>
+      <Standing league={selectedLeague} year={year}/>
     </div>
-  );
+  ) : null;
 };
