@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import isoFetch from "isomorphic-fetch";
+import { Preloader } from "../Preloader/Preloader";
 
 import "./Standing.css";
 
 export const Standing = (props) => {
   const [standing, setStanding] = useState(null);
   useEffect(() => {
+    setStanding(null)
     isoFetch(
       `https://api-football-standings.azharimm.site/leagues/${props.league}/standings?season=${props.year}&sort=asc`,
       { method: "GET" }
@@ -45,7 +47,7 @@ export const Standing = (props) => {
     });
   }
   return (
-    <div className="standing">
+   standing ? <div className="standing">
       <table className="standing-table">
           <caption>Турнирная таблица. Сезон {`${props.year}-${Number(props.year) + 1}`}</caption>
         <tbody>
@@ -63,6 +65,6 @@ export const Standing = (props) => {
           {table}
         </tbody>
       </table>
-    </div>
+    </div> : <Preloader/>
   );
 };
