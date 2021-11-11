@@ -7,7 +7,7 @@ import "./Standing.css";
 export const Standing = (props) => {
   const [standing, setStanding] = useState(null);
   useEffect(() => {
-    setStanding(null)
+    setStanding(null);
     isoFetch(
       `https://api-football-standings.azharimm.site/leagues/${props.league}/standings?season=${props.year}&sort=asc`,
       { method: "GET" }
@@ -48,23 +48,25 @@ export const Standing = (props) => {
   }
   return (
    standing ? <div className="standing">
-      <table className="standing-table">
-          <caption>Турнирная таблица. Сезон {`${props.year}-${Number(props.year) + 1}`}</caption>
-        <tbody>
-          <tr>
-            <th>№</th>
-            <th>Команда</th>
-            <th>И</th>
-            <th>В</th>
-            <th>Н</th>
-            <th>П</th>
-            <th>ГЗ</th>
-            <th>ГП</th>
-            <th>О</th>
-          </tr>
-          {table}
-        </tbody>
-      </table>
+        <table className="standing-table">
+          <caption>
+            Турнирная таблица. Сезон {`${props.year}-${Number(props.year) + 1}`}
+          </caption>
+          <tbody>
+            <tr>
+              <th>№</th>
+              <th>Команда</th>
+              <th>И</th>
+              <th>В</th>
+              <th>Н</th>
+              <th>П</th>
+              <th>ГЗ</th>
+              <th>ГП</th>
+              <th>О</th>
+            </tr>
+            {table}
+          </tbody>
+        </table> 
     </div> : <Preloader/>
   );
 };

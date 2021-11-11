@@ -6,6 +6,7 @@
   border-collapse: collapse;
   table-layout: fixed;
   width: 100%;
+  animation: animAppearTable 0.3s;
 }
 
 td,
@@ -21,6 +22,15 @@ caption {
   font-size: 24px;
 }
 
+@keyframes animAppearTable {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 900px) {
   .standing {
     margin: 10px 10px;
@@ -34,13 +44,13 @@ caption {
   }
 }
 @media (max-width: 400px) {
-    select {
-        right: 5px;
-    }
-    caption {
-        font-size: 16px;
-    }
-    td,
+  select {
+    right: 5px;
+  }
+  caption {
+    font-size: 16px;
+  }
+  td,
   th {
     font-size: 10px;
   }
